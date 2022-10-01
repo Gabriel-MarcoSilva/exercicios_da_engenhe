@@ -21,13 +21,13 @@ function verificar() {
         data = new Date(),
         ano = data.getFullYear(),
         fano = document.getElementById("anoNas"),
-        sexo = document.getElementsByName("sex")
-    res = document.querySelector("div#resultado"),
+        sexo = document.getElementsByName("sex"),
+        res = document.querySelector("div#resultado"),
         genero = "",
-        img = document.createElement('img');
+        img = document.createElement('img'); //cria uma tag img
 
 
-    img.setAttribute('id', 'foto')
+    img.setAttribute('id', 'foto') //atribui para a tag img um id
 
     if (fano.value == 0 || fano.value > ano) {
         alert("[ERRO] Verifique se  o ano foi digitado corretamente")
@@ -59,8 +59,8 @@ function verificar() {
             }
         }
         res.style.align = "center"
-        res.innerHTML = `Detectamos um ${genero} de ${idade} anos`
-        res.appendChild(img)
+        res.innerHTML = `Detectamos uma pessoa do genero: ${genero} de ${idade} anos`
+        res.appendChild(img) //adiciona a nova tag
 
     }
 }
