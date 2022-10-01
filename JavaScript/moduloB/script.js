@@ -26,11 +26,39 @@ function nome(){
 //operadores
 
     /*
-        Aritméticos: 
+        Aritméticos: (retuen: number)
             + soma
             - subtração
             * multiplicação
             / divisao
             % resto
             ** exponenciação
+            
+            -> Importância (precedência)
+                ()
+                **
+                *, /, %
+                +, - 
+            
+        Lógicos: (return: boolean)
+            && e
+            || ou
+            !  negação
+        
+            -> Importância:
+                !
+                &&
+                ||
+        Relacionais: (return:  boolean)
+            =  atriuição
+            == igual
+            != diferente
+            >  maior
+            <  menor
+            >= maior ou igual
+            <= menor ou igual
+
+        Ternário: 
+            ? :
+            teste ? true : false
     */
