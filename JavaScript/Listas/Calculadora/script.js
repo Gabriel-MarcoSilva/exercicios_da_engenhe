@@ -1,8 +1,15 @@
 var display = document.getElementById("operacoes"),
-    array = [], i, val1 = '0', val2 = '', val3 = '', pula = false, marca, cont = true, guarda = '';
+    val1 = '0',
+    val2 = '',
+    val3 = '',
+    pula = false,
+    marca,
+    cont = true,
+    guarda = '';
+
 display.innerHTML = val1
 
-function calcular(props) {
+function calcular(props) { //armazena os numeros como string, separados por variáveis
 
     if (!pula) {
         if (val1 == '0') {
@@ -17,11 +24,11 @@ function calcular(props) {
 
     display.innerHTML = val1 + " " + val2 + " " + val3
 
-    console.log(val1, val2, val3)
-    
+    //console.log(val1, val2, val3)
+
 }
 
-function igual() {
+function igual() { // fnção que realiza as operações e retorna as variáveis para seus valores iniciais
 
     var operacao;
 
@@ -39,18 +46,18 @@ function igual() {
     }
 
     document.getElementById('resultado').innerHTML = operacao
-    val1 = ''
+    val1 = String(operacao)
     val2 = ''
     val3 = ''
     pula = false
 }
 
-function operacoes(props) {
+function operacoes(props) { //para n ficar repetindo toda hora no display a operação
     if (cont && val3 == '') {
         val2 = props
-        display.innerHTML = val1 + " " + val2 + " " + val3
+        display.innerHTML = val1 + " " + val2
         pula = true
-    }else{
+    } else {
         cont = false
     }
 }
