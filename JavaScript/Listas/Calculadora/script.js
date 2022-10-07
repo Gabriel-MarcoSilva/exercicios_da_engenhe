@@ -18,8 +18,7 @@ function calcular(props) {
     display.innerHTML = val1 + " " + val2 + " " + val3
 
     console.log(val1, val2, val3)
-
-
+    
 }
 
 function igual() {
@@ -47,10 +46,11 @@ function igual() {
 }
 
 function operacoes(props) {
-    if (cont) {
+    if (cont && val3 == '') {
         val2 = props
-        display.innerHTML = val1 + " " + val2
+        display.innerHTML = val1 + " " + val2 + " " + val3
         pula = true
+    }else{
         cont = false
     }
 }
