@@ -1,27 +1,24 @@
 var display = document.getElementById("operacoes"),
-    array = [], i, val1 = '', val2 = '', val3 = '', pula = false, marca, cont = true, guarda = '';
+    array = [], i, val1 = '0', val2 = '', val3 = '', pula = false, marca, cont = true, guarda = '';
+display.innerHTML = val1
 
 function calcular(props) {
 
-    if (display.innerHTML[0] == 0) {
-        if (props.value != '+' || props.value != '-' || props.value != 'x' || props.value != '/') {
-            display.innerHTML = props
+    if (!pula) {
+        if (val1 == '0') {
             val1 = String(props)
-            pula = false
-        }
-    } else {
-
-        if (!pula) {
+        } else {
             val1 += props
             cont = true
-        } else {
-            val3 += props
-        }   
-
-        display.innerHTML = val1 + " " + val2 + " " + val3
-
-        console.log(val1, val2, val3)
+        }
+    } else {
+        val3 += props
     }
+
+    display.innerHTML = val1 + " " + val2 + " " + val3
+
+    console.log(val1, val2, val3)
+
 
 }
 
@@ -47,11 +44,10 @@ function igual() {
     val2 = ''
     val3 = ''
     pula = false
-    cont = false
 }
 
 function operacoes(props) {
-    if(display.innerHTML[0] != 0 && cont){
+    if (cont) {
         val2 = props
         display.innerHTML = val1 + " " + val2
         pula = true
