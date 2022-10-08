@@ -29,7 +29,7 @@ function inicio() {
 
 function media(array) {
 
-    var soma = 0, media = 0, cont = 0;
+    var soma = 0, media = 0, cont = 0, text;
 
     array.map((data) => {
         soma += data.idade
@@ -38,9 +38,11 @@ function media(array) {
 
     media = soma / cont
 
-    console.log(`foram cadastradas ${cont} pessoas, e a média de suas idades é: ${media} anos`)
+    text = `Foram cadastradas ${cont} pessoas, e a média de suas idades é: ${media} anos`
 
-    document.getElementById("content").innerHTML = `foram cadastradas ${cont} pessoas, e a média de suas idades é: ${media} anos`
+    console.log(text)
+
+    document.getElementById("content").innerHTML = text
 }
 
 function mostrar() {
