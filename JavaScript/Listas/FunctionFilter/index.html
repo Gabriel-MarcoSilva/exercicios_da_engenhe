@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+</head>
+<body >
+    <section style="
+            display: flex;
+            flex-direction: column;
+            width: 99vw; 
+            height: 90vh; 
+            align-items: center;
+            justify-content: center;"
+    >
+        <h1> Pressione F12</h1>
+        <h4 style="margin-top: -12px;">ou clique no botão</h4>
+        <input type="text" id="name">
+        <input 
+            type="button" 
+            onclick="mostrar()" 
+            id="button" 
+            value="MOSTRAR"
+            style=" cursor: pointer; margin-top: 20px;"
+        />
+        <section 
+            id="content"
+            style=
+                "
+                    position: absolute;
+                    margin-top:  40vh;
+                "
+        ></section>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
