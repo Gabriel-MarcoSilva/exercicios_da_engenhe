@@ -5,16 +5,18 @@ var display = document.getElementById("operacoes"),
     pula = false,
     marca,
     cont = true,
-    guarda = '';
+    guarda = '',
+    operacao;
 
 display.innerHTML = val1
 
 function calcular(props) { //armazena os numeros como string, separados por variáveis
 
     if (!pula) {
-        if (val1 == '0') {
+        if (val1 == '0' || val1 == String(operacao)) {
             val1 = String(props)
-        } else {
+        } 
+        else {
             val1 += props
             cont = true
         }
@@ -30,8 +32,6 @@ function calcular(props) { //armazena os numeros como string, separados por vari
 
 function igual() { // fnção que realiza as operações e retorna as variáveis para seus valores iniciais
 
-    var operacao;
-
     if (val2 == '+') {
         operacao = Number(val1) + Number(val3)
     }
@@ -43,13 +43,22 @@ function igual() { // fnção que realiza as operações e retorna as variáveis
     }
     else if (val2 == '/') {
         operacao = Number(val1) / Number(val3)
+    }else{
+        operacao = val1
     }
 
     document.getElementById('resultado').innerHTML = operacao
+    
+    if (operacao == Infinity) {
+        operacao = 0
+    }
+    
     val1 = String(operacao)
     val2 = ''
     val3 = ''
     pula = false
+
+    
 }
 
 function operacoes(props) { //para n ficar repetindo toda hora no display a operação
@@ -60,4 +69,11 @@ function operacoes(props) { //para n ficar repetindo toda hora no display a oper
     } else {
         cont = false
     }
+}
+
+function reset(){
+    val1 = '0'
+    display.innerHTML = val1
+    document.getElementById('resultado').innerHTML = ""
+
 }
