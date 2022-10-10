@@ -7,5 +7,5 @@
 <p> Ex2: paisagem em relação ao horário </p>
 <p> Ex3: o usuário digita a idade e o sexo, e retorna uma imagem em relação ao que foi inserido </p>
 <p> Ex4: o usuário digita o inicio, fim e o passo da progressão aritmética e é retornado os itens </p>
-<p> EX5: o usuário digita um numero e retorna a tabuada daquele numero </p>
-<p> EX6: o usuário digita valores que são armazenados num vetor, que depois realiza operações aritméticas com os valores digitados </p>
+<p> Ex5: o usuário digita um numero e retorna a tabuada daquele numero </p>
+<p> Ex6: o usuário digita valores que são armazenados num vetor, que depois realiza operações aritméticas com os valores digitados </p>
