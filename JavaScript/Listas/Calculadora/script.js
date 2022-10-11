@@ -17,7 +17,6 @@ function calcular(props) { //armazena os numeros como string, separados por vari
         }
         else {
             val1 += props
-            cont = true
         }
     } else {
         val3 += props
