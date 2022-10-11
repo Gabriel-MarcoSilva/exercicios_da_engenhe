@@ -16,10 +16,14 @@ function calcular(props) { //armazena os numeros como string, separados por vari
             val1 = String(props)
         }
         else {
-            val1 += props
+            if(display.innerHTML.length != 24){
+                val1 += props
+            }
         }
     } else {
-        val3 += props
+        if(display.innerHTML.length != 47){
+            val3 += props
+        }
     }
 
     display.innerHTML = val1 + " " + val2 + " " + val3
