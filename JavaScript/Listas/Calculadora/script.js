@@ -4,7 +4,6 @@ var display = document.getElementById("operacoes"),
     val3 = '',
     pula = false,
     marca,
-    cont = true,
     guarda = '',
     operacao;
 
@@ -61,13 +60,13 @@ function igual() { // fnção que realiza as operações e retorna as variáveis
 }
 
 function operacoes(props) { //para n ficar repetindo toda hora no display a operação
-    if (cont && val3 == '') {
-        val2 = props
-        display.innerHTML = val1 + " " + val2
-        pula = true
-    } else {
-        cont = false
+    if (val3 != '') {
+        igual()
     }
+    
+    val2 = props
+    pula = true
+    display.innerHTML = val1 + " " + val2
 }
 
 function reset() {
