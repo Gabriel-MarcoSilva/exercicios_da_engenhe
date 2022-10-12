@@ -56,6 +56,7 @@ function mostrar() {
         document.getElementById("button").value = "APAGAR"
     } else {
         document.getElementById('content').innerHTML = ' '
+        document.getElementById('name').value = ' '
         document.getElementById("button").value = "MOSTRAR"
         denovo = true
     }

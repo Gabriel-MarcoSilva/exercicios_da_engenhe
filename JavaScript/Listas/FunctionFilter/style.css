@@ -1,0 +1,60 @@
+#container{
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    align-items: center;
+    padding: 5vw;
+    height: 50vh;
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.7);
+}
+
+body{
+    background: #970b32;
+    display: flex;
+    width: 99vw; 
+    height: 90vh; 
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    padding: 20px;
+    border-radius: 5px;   
+}
+
+h1::after{
+    border: 3px dotted gray;
+    content: '';
+    width: 15vw;
+    height: 10vh;
+    margin-left: -12.7vw;
+    margin-top: -20px;
+    position: absolute;
+    border-radius: 5px;
+    animation: anima 1.5s infinite;
+}
+
+h4{
+    margin-top: -12px;
+}
+
+#button{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+@keyframes anima{
+    0%{
+        transform: scale(110%);
+    }
+
+    50%{        
+        transform: scale(100%);
+    }
+
+    100%{
+        transform: scale(110%);
+    }
+}
