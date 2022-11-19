@@ -2,4 +2,4 @@
 
 #quando criar uma nova colocar aqui as branchs que serão ignoradas
 
-/node_modules
+NodeJs/node_modules
