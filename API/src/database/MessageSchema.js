@@ -16,6 +16,10 @@ const Message = new Schema({
         type: String,
         required:true
     },
+    done:{
+        type: Boolean,
+        default: false
+    },
     created_at:{
         type: Date,
         default: new Date
