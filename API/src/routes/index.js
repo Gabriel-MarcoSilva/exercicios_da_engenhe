@@ -1,5 +1,5 @@
 const express = require('express')
-
+const UserController = require("../app/controller/UserController")
 const routes = express.Router()
 
 routes.get('/', (req, res) => {
@@ -7,5 +7,10 @@ routes.get('/', (req, res) => {
         "messages": "Tudo ok"
     })
 })
+
+routes.post("/signup", UserController.signup)
+
+
+routes.get("/signup", UserController.userList)
 
 module.exports = routes

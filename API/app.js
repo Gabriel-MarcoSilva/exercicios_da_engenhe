@@ -7,7 +7,9 @@ require('./src/database')
 class App{
     constructor(){
         this.server = express();
-        this.routes()
+        this.middleware();
+        this.routes();
+        
     }
 
     routes(){
