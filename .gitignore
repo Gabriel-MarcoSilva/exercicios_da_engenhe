@@ -2,8 +2,12 @@
 
 #quando criar uma nova colocar aqui as branchs que serão ignoradas
 
-NodeJs/node_modules
+API/node_modules
 
-CapacitacaoEngenhe/NodeJs
+.env
 
-NodeJs/MYSQL
+NodeJs
+
+Apagar
+
+package-lock.json
