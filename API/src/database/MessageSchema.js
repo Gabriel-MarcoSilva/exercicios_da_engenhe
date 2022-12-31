@@ -8,7 +8,7 @@ const Message = new Schema({
         required: true,
     },
     email:{
-        type: SVGStringList,
+        type: String,
         required: true,
         unique: true
     },
