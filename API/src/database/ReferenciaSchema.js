@@ -8,7 +8,7 @@ const Referencia = new Schema({
         unique: true
     },
     author:{
-        type: String,
+        type: {},
         required: true
     },
     title:{

@@ -17,6 +17,7 @@ routes.get("/glossario", GlossarioController.list)
 routes.post("/cad-glossario", GlossarioController.create)
 routes.delete("/delet-glossario/:id", GlossarioController.delete)
 routes.put("/edit-glossario/:id", GlossarioController.edit)
+routes.get("/glossario/:id", GlossarioController.getbyId)
 
 
 routes.get("/referencias", ReferenciaController.list)

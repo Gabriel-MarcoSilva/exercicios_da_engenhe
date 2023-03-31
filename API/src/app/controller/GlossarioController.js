@@ -5,7 +5,7 @@ class GlossarioController {
 
         const { keyWord, description, created_at, updated_at } = req.body;
         console.log(req.body)
-        if ( !keyWord || !description || !created_at || !updated_at) {
+        if (!req.body) {
             return res.status(500).json({ "message": "Campos obrigatórios faltam ser preenchidos" })
         }
 
@@ -48,6 +48,12 @@ class GlossarioController {
 
         return res.status(200).json(user)
 
+    }
+
+    async getbyId(req, res){
+        const user = await GlossarioSchema.findOne({id: req.params.id})
+        console.log(user)
+        return res.status(200).json(user)
     }
 }
 

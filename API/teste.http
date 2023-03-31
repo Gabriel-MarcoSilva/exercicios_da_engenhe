@@ -1,16 +1,23 @@
 //GET http://localhost:4000/glossario
 
-//DELETE http://localhost:4000/delet-glossario/2 HTTP/1.1
+GET http://localhost:4000/glossario/7
 
-//update
-PUT http://localhost:4000/edit-glossario/2
+
+//DELETE http://localhost:4000/delet-glossario/0 HTTP/1.1
+
+//DELETE http://localhost:4000/delet-glossario/6405d949708be81590db8be2 HTTP/1.1
+//usar essa rota : routes.delete("/delet-glossario/:_id", GlossarioController.delete)
+
+//Update
+
+PUT http://localhost:4000/edit-glossario/46
 content-type: application/json
 
 {
-    "id": 2,
-    "keyWord": "Marrocos",
-    "description": "sei lá só quis escrever",
-    "created_at": "01/03/2023",
+    "id": 46,
+    "keyWord": "Loremipson2",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias atque fugiat itaque necessitatibus dolore voluptates nulla dolorum eligendi. Iste rem doloremque nostrum nesciunt a minus mollitia adipisci! Repudiandae, id perspiciatis.",
+    "created_at": "01-03-2023",
     "updated_at": "--"
 }
 
@@ -19,8 +26,8 @@ POST http://localhost:4000/cad-glossario
 content-type: application/json
 
 {
-    "id": 0,
-    "keyWord": "Palavra",
+    "id": 44,
+    "keyWord": "2Palavdddrafffsdssff22",
     "description": "sei lá só quis escrever",
     "created_at": "01-03-2023",
     "updated_at": "--"

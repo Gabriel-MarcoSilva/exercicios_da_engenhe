@@ -4,7 +4,7 @@ class ReferenciaController {
     async create(req, res) {
         const { id, author, title, subtitle, numEdition, publisher, created_at, updated_at, publication, Pag, Vol, Year } = req.body;
         console.log(req.body)
-        if (!id || !author || !title || !subtitle || !numEdition || !publisher || !created_at || !updated_at || !publication || !Pag || !Vol || !Year) {
+        if (!req.body) {
             return res.status(500).json({ "message": "Campos obrigatórios faltam ser preenchidos" })
         }
 
@@ -22,7 +22,7 @@ class ReferenciaController {
         const { id, author, title, subtitle, numEdition, publisher, created_at, updated_at, publication, Pag, Vol, Year } = req.body;
         console.log(req.body)
 
-        if (!id || !author || !title || !subtitle || !numEdition || !publisher || !created_at || !updated_at || !publication || !Pag || !Vol || !Year) {
+        if (!req.body) {
             return res.status(500).json({ "message": "Campos obrigatórios faltam ser preenchidos" })
         }
 
