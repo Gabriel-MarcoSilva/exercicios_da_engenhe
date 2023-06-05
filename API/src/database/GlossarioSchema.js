@@ -7,24 +7,17 @@ const Glossario = new Schema({
         type: Number,
         unique: true
     },
-    keyWord:{
+    palavra:{
         type: String,
         required: true,
         unique: true
     },
-    description:{
+    descricao:{
         type: String,
         required: true,
     },
-    created_at:{
+    vinculo:{
         type: String,
-        required: true
-        //type: Date,
-        //default: new Date
-    },
-    updated_at:{
-        type: String,
-        required:true
     }
 })
 

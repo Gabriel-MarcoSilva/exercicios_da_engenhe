@@ -11,3 +11,8 @@ NodeJs
 Apagar
 
 package-lock.json
+
+API/src/app/controller/ImagesController.js
+API/src/database/ImagesSchema.js
+
+API/testeImage.http

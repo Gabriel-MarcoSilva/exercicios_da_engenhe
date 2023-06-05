@@ -48,6 +48,14 @@ class ReferenciaController {
         return res.status(200).json(user)
 
     }
+
+    async size(req, res){
+        const user = await ReferenciaSchema.find({}, {id: 1})
+
+        console.log(user)
+
+        return res.status(200).json(user.length)
+    }
 }
 
 module.exports = new ReferenciaController()

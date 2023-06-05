@@ -7,45 +7,41 @@ const Referencia = new Schema({
         type: Number,
         unique: true
     },
-    author:{
+    autor:{
         type: {},
         required: true
     },
-    title:{
+    titulo:{
         type: String,
         required: true,
     },
-    subtitle:{
+    subtitulo:{
         type: String,
         required: true
     },
-    numEdition:{
+    numEdicao:{
         type: Number,
     },
-    publisher:{
+    editora:{
         type: String,
         required:true
     },
-    created_at:{
+    publicacao:{
         type: String,
         required:true
     },
-    updated_at:{
+    pag:{
+        type: Number,
+    },
+    vol:{
+        type: Number,
+    },
+    ano:{
+        type: Number,
+    },
+    vinculo:{
         type: String,
-        required:true
-    },
-    publication:{
-        type: String,
-        required:true
-    },
-    Pag:{
-        type: Number,
-    },
-    Vol:{
-        type: Number,
-    },
-    Year:{
-        type: Number,
+        required: true
     }
 })
 

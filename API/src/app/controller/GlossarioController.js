@@ -3,7 +3,7 @@ const GlossarioSchema = require("../../database/GlossarioSchema")
 class GlossarioController {
     async create(req, res) {
 
-        const { keyWord, description, created_at, updated_at } = req.body;
+        const { palavra, descricao, vinculo } = req.body;
         console.log(req.body)
         if (!req.body) {
             return res.status(500).json({ "message": "Campos obrigatórios faltam ser preenchidos" })
@@ -14,21 +14,22 @@ class GlossarioController {
             console.log("cadastrado com sucesso")
             return res.status(200).json(result)
         } catch (err) {
+            console.log(err)
             return res.status(500).json({ "message": "erro ao enviar mensagem" })
         }
     }
 
     async edit(req, res) {
 
-        const { keyWord, description, created_at, updated_at } = req.body;
+        const { palavra, descricao, vinculo } = req.body;
         console.log(req.body)
         
-        if ( !keyWord || !description || !created_at || !updated_at) {
+        if ( !palavra || !descricao || !vinculo) {
             return res.status(500).json({ "message": "Campos obrigatórios faltam ser preenchidos" })
         }
 
         try {
-            const user = await GlossarioSchema.updateOne({id: req.body.id}, {$set: {keyWord: req.body.keyWord, description: req.body.description, updated_at: req.body.updated_at}})
+            const user = await GlossarioSchema.updateOne({id: req.body.id}, {$set: {palavra: req.body.palavra, descricao: req.body.descricao, vinculo: req.body.vinculo}})
             console.log("cadastrado com sucesso")
             return res.status(200).json(user)
         } catch (err) {
@@ -37,7 +38,7 @@ class GlossarioController {
     }
 
     async list(req, res) {
-        const user = await GlossarioSchema.find({}, { id: 1, keyWord: 1, description: 1, updated_at: 1, created_at: 1 })
+        const user = await GlossarioSchema.find({}, { id: 1, palavra: 1, descricao: 1, updated_at: 1, vinculo: 1 })
 
         return res.status(200).json(user)
     }
@@ -54,6 +55,14 @@ class GlossarioController {
         const user = await GlossarioSchema.findOne({id: req.params.id})
         console.log(user)
         return res.status(200).json(user)
+    }
+
+    async size(req, res){
+        const user = await GlossarioSchema.find({}, {id: 1})
+
+        console.log(user)
+
+        return res.status(200).json(user.length)
     }
 }
 
