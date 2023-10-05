@@ -1,11 +1,6 @@
 const express = require('express')
-const UserController = require("../app/controller/UserController")
-const MenssageController = require("../app/controller/MenssagenController")
-const GlossarioController = require('../app/controller/GlossarioController')
 const routes = express.Router()
 
-const auth = require("../middleware/auth")
-const ReferenciaController = require('../app/controller/ReferenciaController')
 const CompetidorController = require('../app/controller/CompetidorController')
 
 routes.get('/', (req, res) => {
@@ -14,22 +9,11 @@ routes.get('/', (req, res) => {
     })
 })
 
-routes.get("/glossario", GlossarioController.list)
-routes.post("/cad-glossario", GlossarioController.create)
-routes.delete("/delet-glossario/:id", GlossarioController.delete)
-routes.put("/edit-glossario/:id", GlossarioController.edit)
-
-
-routes.get("/referencias", ReferenciaController.list)
-routes.post("/cad-referencias", ReferenciaController.create)
-routes.delete("/delet-referencia/:id", ReferenciaController.delete)
-routes.put("/edit-referencia/:id", ReferenciaController.edit)
-
 
 routes.get("/competidor", CompetidorController.list)
 routes.post("/cad-competidor", CompetidorController.create)
-routes.delete("/delet-competidor/:id", CompetidorController.delete)
-routes.put("/edit-competidor/:id", CompetidorController.edit)
+routes.delete("/delet-competidor/:_id", CompetidorController.delete)
+routes.put("/edit-competidor/:_id", CompetidorController.edit)
 
 /*routes.post("/login", UserController.login);
 routes.post("/message", MenssageController.create);
@@ -42,6 +26,5 @@ routes.get("/listMessage", MenssageController.list);
 routes.put("/listMessage/:id", MenssageController.done);
 
 routes.use(auth.validationUser)*/
-routes.post("/signup", UserController.signup);
 
 module.exports = routes

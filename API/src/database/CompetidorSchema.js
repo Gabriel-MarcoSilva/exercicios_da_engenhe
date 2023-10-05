@@ -1,12 +1,7 @@
 const mongoose = require("mongoose")
-
 const Schema = mongoose.Schema
 
 const Competidor = new Schema({
-    id:{
-        type: Number,
-        unique: true
-    },
     nomeCompetidor:{
         type: String,
         required: true
