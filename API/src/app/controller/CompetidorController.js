@@ -41,6 +41,12 @@ class CompetidorController {
         return res.status(200).json(user)
     }
 
+    async byId(req, res){
+        const user = await CompetidorSchema.findOne({ _id: req.params._id})
+        console.log(user)
+        return res.status(200).json(user)
+    }
+
     async delete(req, res) {
         const user = await CompetidorSchema.deleteOne({ _id: req.params._id })
         console.log(user)

@@ -32,7 +32,11 @@ const Competidor = new Schema({
     instituicao:{
         type: String,
         required:true
-    }
+    },
+    // linkQR:{
+    //     type: String,
+    //     required: true
+    // }
 })
 
 module.exports = mongoose.model('Competidor', Competidor)
