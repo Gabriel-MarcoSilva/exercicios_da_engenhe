@@ -22,7 +22,7 @@ class CompetidorController {
         const { _id, nomeCompetidor, equipe, modalidade, ranking, nomeRobo, linkGif, linkRobo, instituicao} = req.body;
         console.log(req.body)
 
-        if (!_id || !nomeCompetidor || !equipe || !modalidade || !ranking || !nomeRobo || !linkGif || !linkRobo || !instituicao) {
+        if (!_id || !nomeCompetidor || !equipe || !modalidade || !nomeRobo || !linkGif || !linkRobo || !instituicao) {
             return res.status(500).json({ "message": "Campos obrigatórios faltam ser preenchidos" })
         }
 
@@ -36,7 +36,7 @@ class CompetidorController {
     }
 
     async list(req, res) {
-        const user = await CompetidorSchema.find({}, { _id: 1, nomeCompetidor: 1, equipe: 1, modalidade: 1, ranking: 1, nomeRobo: 1, linkGif: 1, linkRobo: 1, instituicao: 1})
+        const user = await CompetidorSchema.find({}, { _id: 1, nomeCompetidor: 1, equipe: 1, modalidade: 1, nomeRobo: 1, linkGif: 1, linkRobo: 1, instituicao: 1})
 
         return res.status(200).json(user)
     }
