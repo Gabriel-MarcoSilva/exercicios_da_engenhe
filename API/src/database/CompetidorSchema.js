@@ -2,36 +2,39 @@ const mongoose = require("mongoose")
 const Schema = mongoose.Schema
 
 const Competidor = new Schema({
-    nomeCompetidor:{
+    nomeCompetidor: {
         type: String,
         required: true
     },
-    equipe:{
+    equipe: {
         type: String,
         required: true,
     },
-    modalidade:{
+    modalidade: {
         type: String,
         required: true
     },
-    ranking:{
-        type: Number,
+    pontuacao: {
+        type: Number
     },
-    nomeRobo:{
+    ranking: {
         type: String,
-        required:true
     },
-    linkGif:{
+    nomeRobo: {
         type: String,
-        required:true
+        required: true
     },
-    linkRobo:{
+    linkGif: {
         type: String,
-        required:true
+        required: true
     },
-    instituicao:{
+    linkRobo: {
         type: String,
-        required:true
+        required: true
+    },
+    instituicao: {
+        type: String,
+        required: true
     },
     // linkQR:{
     //     type: String,
