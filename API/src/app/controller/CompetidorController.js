@@ -27,7 +27,7 @@ class CompetidorController {
         }
 
         try {
-            const user = await CompetidorSchema.updateOne({ _id: req.body._id }, { $set: { nomeCompetidor: req.body.nomeCompetidor, equipe: req.body.equipe, modalidade: req.body.modalidade, ranking: req.body.ranking, nomeRobo: req.body.nomeRobo, instituicao: req.body.instituicao, linkRobo: req.body.linkRobo} })
+            const user = await CompetidorSchema.updateOne({ _id: req.body._id }, { $set: { nomeCompetidor: req.body.nomeCompetidor, equipe: req.body.equipe, modalidade: req.body.modalidade, ranking: req.body.ranking, nomeRobo: req.body.nomeRobo, instituicao: req.body.instituicao, linkGif: req.body.linkGif, linkRobo: req.body.linkRobo} })
             console.log(user)
             return res.status(200).json(user)
         } catch (err) {
