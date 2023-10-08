@@ -4,6 +4,7 @@ const routes = express.Router()
 const CompetidorController = require('../app/controller/CompetidorController')
 const BatalhaSumoController = require('../app/controller/BatalhaSumoController')
 const VitoriaController = require('../app/controller/VitoriaController')
+const CorridaFollowController = require('../app/controller/CorridaFollowController')
 
 routes.get('/', (req, res) => {
     res.status(200).json({
@@ -27,6 +28,12 @@ routes.post("/vitoria", VitoriaController.create)
 routes.get("/vitoria/:_id", VitoriaController.byId)
 routes.get("/vitoria", VitoriaController.list)
 routes.put("/edit-vitoria/:_id", VitoriaController.edit)
+
+routes.post("/volta", CorridaFollowController.create)
+routes.get("/volta", CorridaFollowController.list)
+routes.delete("/delet-volta/:_id", CorridaFollowController.delete)
+routes.get("/volta/:_id", CorridaFollowController.byId)
+routes.put("/volta/:_id", CorridaFollowController.edit)
 
 
 /*routes.post("/login", UserController.login);
