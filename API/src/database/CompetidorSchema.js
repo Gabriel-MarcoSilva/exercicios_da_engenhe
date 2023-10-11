@@ -36,10 +36,12 @@ const Competidor = new Schema({
         type: String,
         required: true
     },
-    // linkQR:{
-    //     type: String,
-    //     required: true
-    // }
+    instagram:{
+        type: String
+    },
+    linkGifEquipe:{
+        type: String
+    }
 })
 
 module.exports = mongoose.model('Competidor', Competidor)
