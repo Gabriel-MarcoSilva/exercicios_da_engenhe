@@ -52,6 +52,12 @@ class BatalhaCodeController {
         console.log(user)
         return res.status(200).json(user)
     }
+
+    async deleteAll(req, res) {
+        const user = await BatalhaCodeSchema.deleteMany({})
+        console.log(user)
+        return res.status(200).json(user)
+    }
 }
 
 module.exports = new BatalhaCodeController()

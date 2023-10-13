@@ -58,7 +58,7 @@ class VitoriaCodeController {
     }
 
     async deleteAll(req, res) {
-        const user = await VitoriaCodeSchema.deleteAll({}, {_id: 1})
+        const user = await VitoriaCodeSchema.deleteMany({})
         console.log(user)
         return res.status(200).json(user)
     }
