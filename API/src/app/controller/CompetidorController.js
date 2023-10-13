@@ -27,7 +27,7 @@ class CompetidorController {
         }
 
         try {
-            const user = await CompetidorSchema.updateOne({ _id: req.body._id }, { $set: { nomeCompetidor: req.body.nomeCompetidor, equipe: req.body.equipe, modalidade: req.body.modalidade, ranking: req.body.ranking, nomeRobo: req.body.nomeRobo, instituicao: req.body.instituicao, linkGif: req.body.linkGif, linkRobo: req.body.linkRobo} })
+            const user = await CompetidorSchema.updateOne({ _id: req.body._id }, { $set: { nomeCompetidor: req.body.nomeCompetidor, equipe: req.body.equipe, modalidade: req.body.modalidade, ranking: req.body.ranking, nomeRobo: req.body.nomeRobo, instituicao: req.body.instituicao, linkGif: req.body.linkGif, linkRobo: req.body.linkRobo, pontuacao: req.body.pontuacao, instagram: req.body.instagram, linkGifEquipe: req.body.linkGifEquipe} })
             console.log(user)
             return res.status(200).json(user)
         } catch (err) {
@@ -36,7 +36,7 @@ class CompetidorController {
     }
 
     async list(req, res) {
-        const user = await CompetidorSchema.find({}, { _id: 1, nomeCompetidor: 1, equipe: 1, modalidade: 1, nomeRobo: 1, linkGif: 1, linkRobo: 1, instituicao: 1})
+        const user = await CompetidorSchema.find({}, { _id: 1, nomeCompetidor: 1, equipe: 1, modalidade: 1, nomeRobo: 1, linkGif: 1, linkRobo: 1, instituicao: 1, ranking: 1, pontuacao: 1})
 
         return res.status(200).json(user)
     }

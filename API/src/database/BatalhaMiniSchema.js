@@ -1,5 +1,6 @@
 const mongoose = require("mongoose")
 const CompetidorSchema = require("./CompetidorSchema")
+const VitoriaMiniSchema = require("./VitoriaMiniSchema")
 const Schema = mongoose.Schema
 
 const BatalhaMini = new Schema({
@@ -14,6 +15,11 @@ const BatalhaMini = new Schema({
             CompetidorSchema
         },
         required: true
+    },
+    vencedor:{
+        type:  {
+            VitoriaMiniSchema
+        }
     }
 })
 

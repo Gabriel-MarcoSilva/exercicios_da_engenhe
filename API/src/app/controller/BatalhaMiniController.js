@@ -36,7 +36,7 @@ class BatalhaMiniController {
     // }
 
     async list(req, res) {
-        const user = await BatalhaMiniSchema.find({}, { comp1: 1, comp2: 1 })
+        const user = await BatalhaMiniSchema.find({}, { comp1: 1, comp2: 1, vencedor: 1 })
 
         return res.status(200).json(user)
     }
@@ -49,6 +49,12 @@ class BatalhaMiniController {
 
     async delete(req, res) {
         const user = await BatalhaMiniSchema.deleteOne({ _id: req.params._id })
+        console.log(user)
+        return res.status(200).json(user)
+    }
+
+    async deleteAll(req, res) {
+        const user = await BatalhaMiniSchema.deleteMany({})
         console.log(user)
         return res.status(200).json(user)
     }

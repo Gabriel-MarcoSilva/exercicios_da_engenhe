@@ -52,6 +52,12 @@ class BatalhaSumoController {
         console.log(user)
         return res.status(200).json(user)
     }
+
+    async deleteAll(req, res) {
+        const user = await BatalhaSumoSchema.deleteMany({})
+        console.log(user)
+        return res.status(200).json(user)
+    }
 }
 
 module.exports = new BatalhaSumoController()

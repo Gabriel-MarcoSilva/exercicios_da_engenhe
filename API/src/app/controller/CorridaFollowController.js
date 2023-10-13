@@ -52,6 +52,12 @@ class CorridaFollowController {
         console.log(user)
         return res.status(200).json(user)
     }
+
+    async deleteAll(req, res) {
+        const user = await CorridaFollowSchema.deleteMany({})
+        console.log(user)
+        return res.status(200).json(user)
+    }
 }
 
 module.exports = new CorridaFollowController()
