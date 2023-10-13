@@ -42,10 +42,6 @@ const Competidor = new Schema({
     linkGifEquipe:{
         type: String
     }
-    // linkQR:{
-    //     type: String,
-    //     required: true
-    // }
 })
 
 module.exports = mongoose.model('Competidor', Competidor)

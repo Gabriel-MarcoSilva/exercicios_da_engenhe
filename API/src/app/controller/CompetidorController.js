@@ -19,7 +19,7 @@ class CompetidorController {
 
     async edit(req, res) {
 
-        const { _id, nomeCompetidor, equipe, modalidade, ranking, nomeRobo, linkGif, linkRobo, instituicao} = req.body;
+        const { _id, nomeCompetidor, equipe, modalidade, nomeRobo, linkGif, linkRobo, instituicao} = req.body;
         console.log(req.body)
 
         if (!_id || !nomeCompetidor || !equipe || !modalidade || !nomeRobo || !linkGif || !linkRobo || !instituicao) {
@@ -36,7 +36,7 @@ class CompetidorController {
     }
 
     async list(req, res) {
-        const user = await CompetidorSchema.find({}, { _id: 1, nomeCompetidor: 1, equipe: 1, modalidade: 1, nomeRobo: 1, linkGif: 1, linkRobo: 1, instituicao: 1, ranking: 1, pontuacao: 1})
+        const user = await CompetidorSchema.find({}, { _id: 1, nomeCompetidor: 1, equipe: 1, modalidade: 1, nomeRobo: 1, linkGif: 1, linkRobo: 1, instituicao: 1, pontuacao: 1, ranking: 1, instagram: 1, linkGifEquipe: 1})
 
         return res.status(200).json(user)
     }

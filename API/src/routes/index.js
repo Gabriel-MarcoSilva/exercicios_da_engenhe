@@ -45,6 +45,7 @@ routes.get("/vitoria", VitoriaController.list)
 routes.delete("/delet-vitoria", VitoriaController.deleteAll)
 routes.delete("/delet-vitoria/:_id", VitoriaController.delete)
 routes.put("/edit-vitoria/:_id", VitoriaController.edit)
+routes.delete("/vitoria/:_id", VitoriaController.delete)
 
 routes.post("/vitoria-mini", VitoriaMiniController.create)
 routes.get("/vitoria-mini/:_id", VitoriaMiniController.byId)
