@@ -1,3 +1,13 @@
-/cap1
-/cap2
-/paginaGit
+#nesse ignore será pra separar as capacitações em relações às branchs
+
+#quando criar uma nova colocar aqui as branchs que serão ignoradas
+
+API/node_modules
+
+.env
+
+NodeJs
+
+Apagar
+
+package-lock.json

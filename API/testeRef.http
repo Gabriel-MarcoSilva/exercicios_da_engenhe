@@ -1,0 +1,43 @@
+
+GET http://localhost:4000/referencias
+
+//DELETE http://localhost:4000/delet-glossario/2 HTTP/1.1
+
+//update
+PUT http://localhost:4000/edit-referencia/5
+content-type: application/json
+
+{
+    "id": 5,
+    "author": "kageOshu",
+    "title": "String",
+    "subtitle": "String",
+    "numEdition": 45,
+    "publisher": "String",
+    "created_at": "String",
+    "updated_at": "String",
+    "publication": "String",
+    "Pag": 45,
+    "Vol": 45,
+    "Year": 45
+}
+
+//create (pra funcionar esse ou o put deve retirar primeiro
+
+POST http://localhost:4000/cad-referencias
+content-type: application/json
+
+{
+    "id": 5,
+    "author": "kage",
+    "title": "String",
+    "subtitle": "String",
+    "numEdition": 45,
+    "publisher": "String",
+    "created_at": "String",
+    "updated_at": "String",
+    "publication": "String",
+    "Pag": 45,
+    "Vol": 45,
+    "Year": 45
+}

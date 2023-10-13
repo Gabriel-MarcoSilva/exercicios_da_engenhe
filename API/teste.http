@@ -1,0 +1,27 @@
+//GET http://localhost:4000/glossario
+
+//DELETE http://localhost:4000/delet-glossario/2 HTTP/1.1
+
+//update
+PUT http://localhost:4000/edit-glossario/2
+content-type: application/json
+
+{
+    "id": 2,
+    "keyWord": "Marrocos",
+    "description": "sei lá só quis escrever",
+    "created_at": "01/03/2023",
+    "updated_at": "--"
+}
+
+//create (pra funcionar esse ou o put deve retirar primeiro
+POST http://localhost:4000/cad-glossario
+content-type: application/json
+
+{
+    "id": 0,
+    "keyWord": "Palavra",
+    "description": "sei lá só quis escrever",
+    "created_at": "01-03-2023",
+    "updated_at": "--"
+}
