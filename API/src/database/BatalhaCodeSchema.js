@@ -1,20 +1,15 @@
 const mongoose = require("mongoose")
-const CompetidorSchema = require("./CompetidorSchema")
 const Schema = mongoose.Schema
 
-const BatalhaCode = new Schema({
-    comp1:{
-        type: {
-            CompetidorSchema
-        },
+const Usuario = new Schema({
+    nome:{
+        type: String,
         required: true
     },
-    comp2:{
-        type: {
-            CompetidorSchema
-        },
+    senha:{
+        type: String,
         required: true
     }
 })
 
-module.exports = mongoose.model('BatalhaCode', BatalhaCode)
+module.exports = mongoose.model('Usuario', Usuario)
